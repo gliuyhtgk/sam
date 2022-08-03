@@ -1,4 +1,8 @@
 import requests
+import dataclasses
+import random
+import json
+import torch
 
 api_url = 'https://api.api-ninjas.com/v1/randomword'
 response = requests.get(api_url, headers={'X-Api-Key': 'YOUR_API_KEY'})
