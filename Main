@@ -4,7 +4,8 @@ import random
 import json
 import torch
 
-api_url = 'https://api.api-ninjas.com/v1/randomword'
+text = 'Hello world!'
+api_url = 'https://api.api-ninjas.com/v1/textlanguage?text={}'.format(text)
 response = requests.get(api_url, headers={'X-Api-Key': 'YOUR_API_KEY'})
 if response.status_code == requests.codes.ok:
     print(response.text)
